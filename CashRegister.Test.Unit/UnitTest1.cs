@@ -47,7 +47,14 @@ namespace CashRegister.Test.Unit
             Assert.That(uut.NoOfItems, Is.Zero);
         }
 
-
+        [Test]
+        public void ctor_NoItemsAdded_TotalIsZero()
+        {
+            // Arrange er i setup
+            // Act - der skal ikke gøres noget
+            // Assert
+            Assert.That(uut.GetTotal(), Is.Zero);
+        }
 
         [Test]
         public void AddItem_NegativeItem_Throws()
