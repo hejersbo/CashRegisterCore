@@ -16,8 +16,12 @@ namespace CashRegister
 
         public void AddItem(double itemPrice)
         {
-            if (itemPrice < 0)
-                throw new ArgumentOutOfRangeException("Prisen er mindre end nul");
+            if (
+                itemPrice > 10000 
+                || 
+                itemPrice < 0
+                )
+                throw new ArgumentOutOfRangeException("Prisen er ukorrekt");
 
             _total += itemPrice;
             NoOfItems++;
