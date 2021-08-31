@@ -58,20 +58,43 @@ namespace CashRegister.Test.Unit
             Assert.That(uut.NoOfItems, Is.Zero);
         }
 
-        [Test]
-        public void ctor_NoItemsAdded_TotalIsZero()
-        {
-            // Arrange er i setup
-            // Act - der skal ikke gøres noget
-            // Assert
-            Assert.That(uut.GetTotal(), Is.Zero);
-        }
+        //[Test]
+        //public void ctor_NoItemsAdded_TotalIsZero()
+        //{
+        //    // Arrange er i setup
+        //    // Act - der skal ikke gøres noget
+        //    // Assert
+        //    Assert.That(uut.GetTotal(), Is.Zero);
+        //}
 
         [Test]
         public void AddItem_NegativeItem_Throws()
         {
             // Act + Assert
             Assert.That(() => uut.AddItem(-10), Throws.TypeOf<ArgumentOutOfRangeException>());
+        }
+
+        //[Test]
+        //public void AddItem_BigItem_Throws()
+        //{
+        //    // Act + Assert
+        //    Assert.That(() => uut.AddItem(10001), Throws.TypeOf<ArgumentOutOfRangeException>());
+        //}
+
+        //[Test]
+        //public void SubtractItem_EmptyAndNegativeItem_NoChanges()
+        //{
+        //    uut.SubtractItem(-10);
+
+        //    Assert.That(uut.GetTotal(), Is.EqualTo(0));
+        //}
+        [Test]
+        public void SubtractItem_OneItemAndNegativeItem_CorrectTotal()
+        {
+            uut.AddItem(10);
+            uut.SubtractItem(-10);
+
+            Assert.That(uut.GetTotal(), Is.EqualTo(0));
         }
     }
 }

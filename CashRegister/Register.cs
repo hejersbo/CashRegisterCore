@@ -17,9 +17,9 @@ namespace CashRegister
         public void AddItem(double itemPrice)
         {
             if (
-                itemPrice > 10000 
-                || 
                 itemPrice < 0
+                ||
+                itemPrice > 10000
                 )
                 throw new ArgumentOutOfRangeException("Prisen er ukorrekt");
 
@@ -37,5 +37,18 @@ namespace CashRegister
             return NoOfItems;
         }
 
+        public void SubtractItem(double itemPrice)
+        {
+            if (itemPrice < 0)
+                itemPrice = -itemPrice;
+
+            if (NoOfItems > 0)
+            {
+                NoOfItems--;
+                _total -= itemPrice;
+            }
+
+            return;
+        }
     }
 }
