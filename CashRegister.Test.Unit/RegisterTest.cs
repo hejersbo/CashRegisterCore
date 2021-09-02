@@ -32,10 +32,10 @@ namespace CashRegister.Test.Unit
             // Arrange
 
             // Act
-            uut.AddItem(13.45);
+            uut.AddItem(45.50);
 
             // Assert
-            Assert.That(uut.GetTotal(), Is.EqualTo(13.45));
+            Assert.That(uut.GetTotal(), Is.EqualTo(45.50));
         }
 
         [Test]
