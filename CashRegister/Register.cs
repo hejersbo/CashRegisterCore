@@ -8,10 +8,41 @@ namespace CashRegister
     {
         public int NoOfItems { get; set; }
         private double _total;
+        private List<double> itemList;
+        private string _name;
         public Register()
         {
             _total = 0.0;
             NoOfItems = 0;
+           // itemList = new List<double>(10);
+        }
+
+        public void AddName(string name)
+        {
+            _name = name.Trim();
+        }
+
+        public string GetName()
+        {
+            return _name;
+        }
+
+        static int Collatz(int n)
+        {
+            while (n > 1)
+            {
+                if (n % 2 == 0) // if n is even, divide it by two
+                    n = n / 2;
+                else // if n is odd, multiply by three and add one
+                    n = 3 * n + 1;
+            }
+
+            //while (true)
+            //{
+            //}
+
+            // unreachable code???
+            return n;
         }
 
         public void AddItem(double itemPrice)
@@ -25,6 +56,7 @@ namespace CashRegister
 
             _total += itemPrice;
             NoOfItems++;
+            itemList.Add(itemPrice);
         }
 
         public double GetTotal()

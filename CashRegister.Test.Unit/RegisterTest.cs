@@ -18,7 +18,7 @@ namespace CashRegister.Test.Unit
         public void AddItem_OneItem_NoOfItemsIs1()
         {
             // Arrange
-
+            uut.GetName();
             // Act
             uut.AddItem(12.50);
 

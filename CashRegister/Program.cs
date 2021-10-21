@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography;
 
 
 namespace CashRegister
@@ -9,7 +10,10 @@ namespace CashRegister
         {
             Register reg = new Register();
 
+            reg.AddName(args[0]);
             reg.AddItem(22.55);
+
+            Console.WriteLine($"Name = {reg.GetName()}");
 
             if (reg.NoOfItems == 1)
             {
