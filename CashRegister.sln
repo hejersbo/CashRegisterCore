@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CashRegister", "CashRegister\CashRegister.csproj", "{D5B48CAC-10C0-45E7-BB39-111044E84A31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashRegister.Test.Unit", "CashRegister.Test.Unit\CashRegister.Test.Unit.csproj", "{A627C84B-42B7-4863-BA1E-A5CE14B4FB1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CashRegister.Test.Unit", "CashRegister.Test.Unit\CashRegister.Test.Unit.csproj", "{A627C84B-42B7-4863-BA1E-A5CE14B4FB1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
