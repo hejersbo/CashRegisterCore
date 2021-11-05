@@ -8,18 +8,18 @@ namespace CashRegister
     {
         public int NoOfItems { get; set; }
         private double _total;
-        private List<double> itemList;
+        private readonly List<double> itemList;
         private string _name;
         public Register()
         {
             _total = 0.0;
             NoOfItems = 0;
-           // itemList = new List<double>(10);
+           itemList = new List<double>(10);
         }
 
         public void AddName(string name)
         {
-            _name = name.Trim();
+            _name = name?.Trim();
         }
 
         public string GetName()
@@ -52,7 +52,7 @@ namespace CashRegister
                 ||
                 itemPrice > 10000
                 )
-                throw new ArgumentOutOfRangeException("Prisen er ukorrekt");
+                throw new ArgumentOutOfRangeException(nameof(itemPrice), "Prisen er ukorrekt");
 
             _total += itemPrice;
             NoOfItems++;

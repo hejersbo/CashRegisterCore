@@ -43,7 +43,7 @@ namespace CashRegister
                 // Hvis jeg kommer hertil var der ingen exception
                 Console.WriteLine("Der kom IKKE en exception som forventet");
             }
-            catch (Exception e)
+            catch (ArgumentException e)
             {
                 Console.WriteLine($"Der kom en exception som forventet med indhold {e.Message}");
             }
