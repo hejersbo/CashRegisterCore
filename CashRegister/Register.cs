@@ -17,11 +17,6 @@ namespace CashRegister
            itemList = new List<double>(10);
         }
 
-        public void AddName(string name)
-        {
-	    Console.Writeline("AddName");
-            _name = name?.Trim();
-        }
 
         public string GetName()
         {
