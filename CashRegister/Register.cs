@@ -19,6 +19,7 @@ namespace CashRegister
 
         public void AddName(string name)
         {
+	    Console.Writeline("AddName");
             _name = name?.Trim();
         }
 
@@ -27,23 +28,6 @@ namespace CashRegister
             return _name;
         }
 
-        static int Collatz(int n)
-        {
-            while (n > 1)
-            {
-                if (n % 2 == 0) // if n is even, divide it by two
-                    n = n / 2;
-                else // if n is odd, multiply by three and add one
-                    n = 3 * n + 1;
-            }
-
-            //while (true)
-            //{
-            //}
-
-            // unreachable code???
-            return n;
-        }
 
         public void AddItem(double itemPrice)
         {
