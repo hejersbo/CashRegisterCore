@@ -35,7 +35,7 @@ namespace CashRegister.Test.Unit
             uut.AddItem(45.50);
 
             // Assert
-            Assert.That(uut.GetTotal(), Is.EqualTo(45.50));
+            Assert.That(uut.GetTotal(), Is.EqualTo(45.55));
         }
 
         [Test]
