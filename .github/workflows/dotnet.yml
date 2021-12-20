@@ -22,13 +22,13 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal --logger "junit;LogFilePath=test-results/results.xml"
+      run: dotnet test --no-build --verbosity normal --logger "junit;LogFilePath=C:/test-results/results.xml"
     - name: Upload Unit Test Results
       if: always()
       uses: actions/upload-artifact@v2
       with:
         name: Unit Test Results
-        path: test-results/results.xml
+        path: C:/test-results/results.xml
         
   publish-test-results:
     name: "Publish Unit Tests Results"
