@@ -22,7 +22,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal --logger "junit;LogFilePath=test-results/results.xml"
     - name: Upload Unit Test Results
       if: always()
       uses: actions/upload-artifact@v2
